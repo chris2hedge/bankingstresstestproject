@@ -1,6 +1,6 @@
 # *Banking Stress Test Comparisons*
 
-In this project we will use a collection of bank histories to see how they survived, could survive or died. The collection you will see consists of Silicon Valley bank, Wells Fargo, JP Morgon, and First Republic, we will also be using a benchmark known as KRE to compare and contrast. We used a collection of loan loss data from the [Federal Reserve Website](https://www.federalreserve.gov/supervisionreg/dfa-stress-tests-2023.htm)
+In this project we will use a collection of bank histories to see how they survived, could survive or died. The collection you will see consists of Silicon Valley bank, Wells Fargo, JP Morgan, and First Republic, we will also be using a benchmark known as KRE to compare and contrast. We used a collection of loan loss data from the [Federal Reserve Website](https://www.federalreserve.gov/supervisionreg/dfa-stress-tests-2023.htm)
 
 -----------------------
 

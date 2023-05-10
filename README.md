@@ -1,6 +1,9 @@
 # *Banking Stress Test Comparisons*
+In this banking stress test project we will use 4 different banks to test and see how or why 1 bank died off and how the others survived. Throughout the course of this project you will see a lot of information from the[Federal Reserve Website](https://www.federalreserve.gov/supervisionreg/dfa-stress-tests-2023.htm) and different Basel reports of our banks.
 
-In this project we will use a collection of bank histories to see how they survived, could survive or died. The collection you will see consists of Silicon Valley bank, Wells Fargo, JP Morgan, and First Republic, we will also be using a benchmark known as KRE to compare and contrast. We used a collection of loan loss data from the [Federal Reserve Website](https://www.federalreserve.gov/supervisionreg/dfa-stress-tests-2023.htm)
+-----------------------
+## *Installation*
+
 
 -----------------------
 

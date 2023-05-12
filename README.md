@@ -7,7 +7,7 @@
 
 - Programming Languages: Python
 
-- Frameworks: Python, JupyterLab, VS code
+- Frameworks: Python, JupyterLab, VS code, Streamlit
 
 - Libraries: Pandas, Numpy, Pathlib, Streamlit, Rich
 -----------------------
@@ -27,7 +27,17 @@
 
 ## *Usage*
 
+- Step 1: Open your gitbash/terminal and navigate to either VS Code, Jupyterlab or Streamlit
 
+![Screenshot 2023-05-11 202949](https://github.com/chris2hedge/bankingstresstestproject/assets/127170402/6ec7ef54-e08e-491c-a55a-fa8ed9848730)
+
+![Screenshot 2023-05-11 203447](https://github.com/chris2hedge/bankingstresstestproject/assets/127170402/b175bfbc-b6fe-48a0-8a25-2e165c0fb1d5)
+
+![Screenshot 2023-05-11 203744](https://github.com/chris2hedge/bankingstresstestproject/assets/127170402/85c4f65e-7b51-4a57-b6df-56b6bc477e3b)
+
+- Step 2: If you chose Streamlit, enjoy the website. If you chose Jupyterlab or VS Code please navigate to the Wells Fargo bank run(or any other bank run) and run the code.
+
+![Screenshot 2023-05-11 203552](https://github.com/chris2hedge/bankingstresstestproject/assets/127170402/5b4a12b8-6b6c-4b3d-b53b-31cf7af27273)
 
 
 -----------------------

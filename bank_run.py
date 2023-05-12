@@ -71,8 +71,8 @@ class BankRun:
             credit_risk_assets = self.credit_risk_assets
             capital = self.total_capital
 
-            if (n%10):
-                print(f"Attempt number: {n}" )
+            #if (n%100 == 0):
+                #print(f"Attempt number: {n}" )
 
             # Sample deposit withdrawals based on probabilities
             deposit_withdrawals = np.random.choice(p_withdrawal, p=probabilities) * self.initial_cash
@@ -135,7 +135,7 @@ class BankRun:
         data = [sim_index, withdrawel_list, capital_remaining, risk_assets_remaining, discount_rate_list, cet1_list, success]
         results = pd.DataFrame(data)#, columns=['simulation_number', 'withdrawal_amt', 'capital', 'credit_risk_assets', 'discount_rate',  'cet1_ratio', 'success'])  
         results = results.transpose()
-        results.columns = ['simulation_number', 'withdrawal_amt', 'capital', 'credit_risk_assets', 'discount_rate',  'cet1_ratio', 'success']
+        results.columns = ['simulation_number', 'withdrawal_amt', 'capital_left', 'credit_risk_assets_left', 'discount_rate',  'cet1_ratio', 'success']
         results = results.set_index('simulation_number')
 
         return results

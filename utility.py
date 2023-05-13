@@ -41,14 +41,14 @@ def calc_credit_risk(credit_list):
     Parameters
     --------
     credit_list: data object
-        Can be list, series, any object that is list-like object
+        Can be int or a float, or a list with dictionary with being keys of assests with values of a list of assest_value and risk_weight.
     """
     credit_risk = 0
     if is_num(credit_list):
         return credit_list
 
-    for credit_asset in credit_list:
-        credit_risk = asset_value(credit_asset) * risk_weight(credit_asset)
+    #for credit_asset in credit_list:
+        #credit_risk += asset_value(credit_asset) * risk_weight(credit_asset)
     return credit_risk
 
 def calc_market_risk(value_at_risk, s_var):
@@ -94,3 +94,6 @@ def is_num(x):
         return True
     else:
         return False
+    
+
+###def assest_value():

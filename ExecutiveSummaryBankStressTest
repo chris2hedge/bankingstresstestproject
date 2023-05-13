@@ -1,0 +1,104 @@
+Banking Stress Test Executive Summary
+
+Team Members: Mark Beers, Gregory Kulin, Samuel Jew, Eyasu Alemu, John Garcia, and Chris Cummock
+
+UC Berkeley Fintech Bootcamp 							May 11, 2023
+
+
+
+	The banking sector, business lending, bailouts, and runs on bank deposits are all in the US and Global economic and investing spotlight, attributing these causes to the failure for Silicon Valley Bank and of First Republic, and a significant drop in the KRE Regional banking index. 
+In the first half of March 2023, the KRE SPDR S&P REGIONAL BANKING ETF dropped dramatically losing 30% of its value between March 1-15th while breaking all of its typically tracked moving averages to the downside.  Its 21-day Relative Strength Index (RSI) dropped below 20, which is often considered a “buy” sign for traders if there is a potential for a bounce, however, in an environment of rising interest rates and inflationary headwinds, the selloff has increased the downward momentum with trading volumes increased more than 3x compared to 2022 average volume.  Currently it’s lost nearly half its value in less than 60 days.  There is essentially no possibility for any value recovery in 2023 and now as short-sellers begin to pile on, it is more likely to be testing its historic lows below $20 from 2009 than seeing anything over $60 in the foreseeable future.
+Unsurprisingly, regional banking turmoil is the result of a general tightening of credit, rising inflation, higher treasury coupon rates, and regional banking’s loan portfolio concentration in Small Business Association (SBA) or early stage/startup company loans. The failure of SVB and FRB has brought these asset compositions and capital ratios into the forefront of banking sector security discussions, it has even spurred discussions on new regulations or further stress test scenarios to further insulate from future failures or banking sector turmoil. In this group project we will examine through Python, Jupyter, and FRED API stress tests plug-ins, various economic, lending, and capital run scenarios, what happened to SVB and FRB to cause their swift failure, as well as compare their capital and loan loss scenarios to that of JP Morgan (JPM) and Wells Fargo (WF) to further understand causation, and decide future sector and regulatory improvements for improving banking going forward.
+
+ 	Systemically important banks like JPM and WF and smaller regional banks like SVB and FRB are all required to maintain specific capital ratios to maintain liquidity to weather various economic and business environment storms. Banks with over $100 billion in total consolidated assets are considered to be strategically and financially systemically important, so they are subject to a few additional capital buffer requirements and subject to the FED’s annual stress test scenarios. The table below shows the common total equity tier 1 for each of  the banks. Tier 1 equity, or CET1, for large banks is set at minimum 4.5%, the stress capital buffer (SCB) is set at 2.5% and finally if the large bank is deemed global systemically important (G-SIBs) another 1.0% is the final capital buffer. 
+
+
+Banks to be tested:		  minCET1    Stress Buffer(2.5%)   G-SIBsurcharge(1%)   CET1 cap req.						
+Silicon Valley Bank		12.05%	  NA          	NA			15.4%
+First Republic Bank		9.32%		  NA		NA			8.25%
+JP Morgan			4.5%		4%		3.5%			12%
+Wells Fargo			4.5%		3.2%		1.5%			9.2%
+KRE Regional Bank Index 
+US Large Bank index		9.75%		NA		NA		         14.41%				
+Definitions for reference:
+Tier 1 Core capital is the most liquid type and represents the core funding of the bank, it includes stockholder equity, no cumulative preferred equity, and minority equity interest
+Tier 2 Supplemental capital includes less liquid hybrid capital instruments, loan-loss provision, and revaluation reserves, as well as undisclosed reserves. Tier 2 cannot exceed Tier 1.
+Tier 3 Capital, allocation for market risk: only applicable to large banks with market risk capital guidelines
+Total capital = (tier 1 + tier 2) - deductions
+
+The bank must maintain capital (referred to as Tier 1 and Tier 2 capital) equal to at least 8% of its risk-weighted assets (RWA). 
+
+Ratos to equate, stress test, and compare:
+Allowance for Loan Losses ratio = (pre tax income + loan loss provision) / net charge offs
+Capital Adequacy Ratio CAR = (Tier 1+Tier2) / RWA (risk weighted assets)
+CET1(Tier 1 Capital Ratio) = Core Capital / RWA x 100%
+Minimum Required Capital MRC (needs to be min 8%), this capital adequacy ratio is measured in relation to its RWA, risk weighted assets. 
+Loan to Assets = Total Debts / Total Assets = (ShortTerm Debt + Long term Debt) / Total Assets
+Loan to Deposits % = Total Loans/ Total Deposits
+Liquidity Ratio = Total Assets / Total Liabilities - Conditional Reserves
+
+
+Basel 1 and Basel 2 capital ratios
+Total risk based ratio	Tier 1 risk based ratio	Tier 1 leverage ratio
+Well capitalized		>10%		and		>6%		and		>5%
+Adequately capitalized	>8%		and		>4%		and		>4%
+Undercapitalized		>6%		and		>3%		and		>3%
+Significantly undercapitalized <6%	and		<3%		or		<3%
+
+Current Loan Loss acceptable range: 6-8%
+Loan composition to dissect and further examine: Credit cards, CRE, mortgages, business and personal loans.
+
+Coding, Modules, and Analysis
+Using a combination of above capital ratios, analysis of their loan compositions, and Tier 1 capital at each of the 4 banks under examination, we then used Python, Jupyter, and FRED api stress test plug-ins to analyze various capital and loan scenarios for our stress test analysis. We started using our usual modules to create data frames, and previous code modules numpy, panda, and utility. Next, we defined initial bank capital, deposits, and loan types as the main 4 bank inputs for analysis, establishing a baseline of their current ratios and capital before the stress test and changes for analysis. 
+We ran 100,000 iterations of the stress test scenarios through FRED api (gw-moore), this subjects the above capital, CET1, loans composition, and other banking ratios through a user desired number of macro stress tests, including capital deposit run, treasury rate increase, loan losses increase (including various loan sector types), global and US economic scenarios to name a few, and what was relevant to our 4 bank analysis.
+What’s important to focus on is RWA, or Risk Weighted Assets, what each banks’ level of of loans deemed RWA are in this asset class, and further the loans types as a percent of their overall loan portfolio. What we found is that regional banks, SVB and FRB, had a different loan composition than big banks, specifically JPM and WF. Regional banks have traditionally served the role of lending more to CRE developers, personal and mortgage loans, loans to early stage firms, or starts-up deemed SBA (Small Business Association, less than $10M in revenue). 
+Larger banks loans’ composition include credit cards, corporate loans, industrial and commercial real estate, and they are much less concentrated in any of the above listed loan types for diversification. Although the loan profiles of SVB and FRB were at risk due to a slowing economy, tighter funding and credit standards for the business loans they focused on (see figure below of SVB loan allocation, 45% to Life Science and Early stage Tech, and a whopping 76% including previous sectors along with overall Technology sector), these declining loan originations, loss of servicing and interest rate revenues, were not the causes of their failure. It was a run on their CET1 or core capital and deposits which led to their eventual failure to meet Basel ratio requirements. 
+
+
+SVB Loan Profile:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wells Fargo Loans Profile:
+
+
+
+JPMorgan Loans Profile:
+
+
+
+
+	Simply put, fear and greed, fast moving information of loan losses mounting, in addition to a social media induced based bank run caused SVB to lose over half their deposits in a matter of days. Coupled with the announcement of short term treasury capital losses on over $3bn of core capital they lost, it caused insolvency. 
+	Similarly, First Republic suffered a core capital run fate, fear from SVB failure meant that wealthy customer deposits over $250,000 we uninsured by the FDIC. Excess of half their deposits left the bank within a matter of weeks seeking safety at larger banks with better capital and bank run cushions, as well as higher supplemental insurance for deposits above the FDIC $250,000 threshold. 
+
+Stress Test Results
+	The FRED stress test api allows users to connect to up to date banking data and run a user desired number of iterations simulating a seemingly endless number of various economic, interest rate, and macro economic stresses to their desired bank. For the purposes of this study we will focus on 100,000 iterations of stress to our 4 banks, with a focus on their initial capital, risk weighted assets, and cash on hand. From these results we can then determine if the tested bank would fail, need to capitalize, or would go into receivership and liquidate. 
+
+Silicon Valley Bank
+The results from SVB bank stress test scenario confirm our analysis and what was highly publicized and reported. Although SVB was more than 50% above their necessary CET1 ratio of core capital (12.05% vs 8.0%), the combination of 3 changes in capital chemistry over just a few months ultimately doomed the US 16th largest bank. Their loan losses and loan composition were highly concentrated in startups, tech, and biotech (roughly 76%), so when funding for SBA loans began to slow over a year ago coupled with the slow down in startup funding, their CET1 capital began to be under stress. Next, they realized over $3bn in losses by selling older short term treasuries at a massive loss, treasury rates at the time were well above a 4% coupon, but SVB’s treasury positions on their books had almost half that coupon rate from the few years before the treasury rate run. Finally, in the matter of a week half their deposits left the bank as Venture Capitalists publicly and privately told their portfolio companies, investors and most of Silicon Valley that their capital was at risk and to move to a better insulated bank during the bank run on assets. 
+
+First Republic Bank
+First Republic had a similar fate to SVB, but the two banks failures certainly could not be called the same. First Republic also seemed to be in a safe position with a CET1 core capital ratio of 8.25% on March 31, 2023. Multiple quarters of ratio deterioration were underway, they had 8.51% CET1 ratio in the previous quarter, as SBA loans and mortgage originations also had slowed as their core revenue drivers. What ultimately doomed FRB was a deposit run, $100bn in deposits left in the month after SVB failure, as FRB had no supplemental insurance for accounts over $250,000 FDIC insurance threshold. Wealthy individuals and businesses left for better insured or capitalized banks as fear and contagion grew in the sector. 
+
+JP Morgan
+Unsurprisingly, JPM, America’s largest and most elite bank was well heeled for an economic slowdown and diversified enough to withstand multiple stress tests.  Their CET1 ratio of 13.8% in the Q12023 is the 5th best ratio among all US and Canadian large banks. The diversity of their loans meant stresses to individual sectors which ultimately hurt SVB and FRB earnings shielded JPM from similar loan revenue declines. Indeed, it is tough to compare SVB and FRB or any regional banks to JPM and WF due to their sizes alone, a few hundred billions of assets for regional banks vs a few trillion of assets in the case of JPM and WF. This meant the systemically important banks have anywhere from 10-20x their size, so a bank run or excessive deposits at the largest banks would be much less likely than the bank runs experienced by SVB or FRB in their regional failures. Our stress test revealed that under most capital, loan and stress test scenarios, JPM would survive and only need marginal recapitalization to ensure they stay within Basel capital ratios of regulators. 
+
+
+
+Wells Fargo
+Wells Fargo is a top 5 systemically important bank with a CET1 capital ratio of 9.2%, under most of the capital stress test scenarios they performed well, although not as well as JPM. They are able to withstand many different capital stress test scenarios, but with a lower CET1 and a loan composition heavier weighted to commercial real estate indicate the possible pain in the next 6-18 months, and is clearly pointed at the CRE loans risk on their books. Furthermore, most CRE loans have a 2-5 year duration, with an estimated half of those loans being due in the next 2 years, due for a refi or CRE project completion. The risk of these assets is in according to their mark to market (many haven’t been revalued since the project began years ago), lower rent rolls in both CRE and residential reflecting work from home, and that higher interest rates means lower asset prices, and less buyers of these CRE assets as REITS use debt to purchase their real estate portfolios. Simply put, the 12% of their overall loan portfolio being in the CRE risked category leave them at considerable risk to refi, interest rate, mark to market, and a general cooling of both CRE and residential transactions.

@@ -1,0 +1,35 @@
+
+Table 3.1: Basel III Standardized Approach RWAs
+
+On-balance sheet assets: 
+
+Exposures to sovereign entities,45
+Exposures to depository institutions and foreign banks,24
+Exposures to PSEs,10488
+Exposures to GSEs,1077
+Corporate exposures,46762
+Residential mortgage exposures,51520
+Statutory multifamily mortgages,1266
+HVCRE loans,795
+Past due loans,6
+Other loans,12360
+Other assets,8723
+Securitization exposures,16
+Equity exposures,1730
+
+Off-balance sheet exposures:
+
+Exposures to sovereign entities,45
+Exposures to depository institutions and foreign banks,24
+Exposures to PSEs,10488
+Exposures to GSEs,1077
+Corporate exposures,46762
+Residential mortgage exposures,51520
+Statutory multifamily mortgages,1266
+HVCRE loans,795
+Past due loans,6
+Other loans,12360
+Other assets,8723
+Securitization exposures,16
+Equity exposures,1730
+

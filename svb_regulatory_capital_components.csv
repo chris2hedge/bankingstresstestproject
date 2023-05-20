@@ -1,0 +1,21 @@
+Regulatory Capital Components,Risk Based Capital Amounts
+Common stock plus related surplus_net of treasury stock,5318
+Retained earnings,8951
+Accumulated other comprehensive income (AOCI),-1911
+Common Equity Tier 1 capital (CET1) before adjustments and deductions,12358
+Less: Goodwill (net of associated deferred taxes),-365
+Intangibles (net of associated deferred taxes),-113
+Deferred tax assets (DTAs) that arise from net operating loss and tax credit carry-forwards_net of any related valuation allowances and net of DTLs,123
+AOCI opt-out election related adjustments,-1880
+Add: CECL transition provision,60
+Total adjustments and deductions from Common Equity Tier 1 Capital,-1339
+CET1 Capital,13697
+Add: Preferred stock,3646
+Minority interest,291
+Less: Additional tier 1 capital deductions,-130
+Additional tier 1 capital,3807
+Tier 1 Capital,17504
+Allowance for credit losses including in Tier 2 capital,946
+CECL transition provision for allowance for credit losses,-70
+Tier 2 Capital,876
+Total capital,18380

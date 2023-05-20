@@ -1,0 +1,27 @@
+FIRST REPUBLIC 
+--------------------------------------------------
+Table 5.1:
+
+
+Multifamily, 22,126, 0, 0, 0, 105, 0, 105, 7
+Office, 2,681, 0, 0, 0, 25, 0, 25, 2
+Mixed Use, 2,644, 0, 0, 0, 5, 0, 5, 1
+Retail, 2,620, 0, 0, 0, 20, 1, 19, 1
+Warehouse/Industrial, 1,578, 0, 0, 0, 3, 0, 3, 0
+Hotel, 619, 0, 0, 0, 46, 0, 46, 3
+Healthcare Facility, 273, 0, 0, 0, 0, 0, 0, 0
+Restaurant, 147, 0, 0, 0, 3, 0, 3, 0
+Other, 739, 0, 0, 0, 4, 0, 4, 0
+Total, 33,427, 0, 0, 0, 211, 1, 210, 14
+Private Equity/Venture Capital Funds, 31,648, 0, 0, 0, 0, 0, 0, 0
+Schools/Non-Profit Organizations, 5,518, 0, 0, 0, 69, 0, 69, 4
+Investment Firms, 1,478, 0, 0, 0, 3, 0, 3, 0
+Real Estate Related Entities, 1,329, 0, 0, 0, 5, 0, 5, 1
+Professional Service Firms, 764, 0, 0, 0, 1, 0, 1, 0
+Aviation/Marine, 625, 0, 0, 0, 4, 0, 4, 0
+Vineyards/Wine, 253, 0, 0, 0, 8, 0, 8, 0
+Clubs and Membership Organizations, 213, 0, 0, 0, 0, 0, 0, 0
+Other, 1,565, 0, 0, 1, 9, 1, 8, 1
+Total excluding PPP, 43,393, 0, 0, 1, 99, 1, 98, 6
+PPP, 20, 0, 0, 0, 0, 0, 0, 0
+Total including PPP, 43,413, 0, 0, 1, 99, 1, 98, 6
